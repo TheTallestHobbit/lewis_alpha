@@ -3,8 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:lewis_alpha/firebase_options.dart';
-import 'pages/login_page.dart';
-import 'auth/main_page.dart';
+import 'package:lewis_alpha/pages/login_page.dart';
+import 'package:lewis_alpha/auth/main_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

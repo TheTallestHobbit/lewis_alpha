@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../pages/login_page.dart';
+import 'package:lewis_alpha/pages/register_page.dart';
+import 'package:lewis_alpha/pages/login_page.dart';
 
 class AuthPage extends StatefulWidget {
   const AuthPage({super.key});
@@ -12,12 +12,18 @@ class AuthPage extends StatefulWidget {
 class _AuthPageState extends State<AuthPage> {
   bool showLoginPage = true;
   
+  void toggleScreens() {
+    setState(() {
+      showLoginPage = !showLoginPage;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     if (showLoginPage) {
-      return LoginPage(showRegisterPage: showRegisterPage);
+      return LoginPage(showRegisterPage: toggleScreens);
     } else {
-      return RegisterPage();
+      return RegisterPage(showLoginPage: toggleScreens);
     }
   }
 }
